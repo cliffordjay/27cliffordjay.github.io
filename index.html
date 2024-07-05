@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Star Gadgets </title>
+    <title>Star Gadgets</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -14,7 +14,7 @@
         }
         .header {
             text-align: center;
-            background-color: #00796b; /* Teal background */
+            background-color: #00796b;
             color: white;
             padding: 20px 0;
             position: relative;
@@ -23,7 +23,7 @@
         .header h2 {
             margin: 0;
             font-size: 2.5em;
-            background-color: #ffeb3b; /* Yellow background for text */
+            background-color: #ffeb3b;
             display: inline-block;
             padding: 0 20px;
             animation: fadeIn 5s infinite alternate;
@@ -47,10 +47,11 @@
             flex-direction: column;
             justify-content: space-between;
             flex: 1;
-            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            perspective: 1000px;
+            transition: transform 0.6s;
         }
         .product:hover {
-            transform: scale(1.05);
+            transform: rotateY(180deg);
             background-color: #e0f2f1;
         }
         .product img {
@@ -79,6 +80,16 @@
                 font-size: 1em;
             }
         }
+        .col-custom {
+            flex: 0 0 30%;
+            max-width: 30%;
+        }
+        @media (max-width: 767px) {
+            .col-custom {
+                flex: 0 0 48%;
+                max-width: 48%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -89,7 +100,7 @@
             <hr class="hr">
         </div>
         <div class="row">
-            <div class="col-4 col-md-4 d-flex">
+            <div class="col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product1">ROLEX</label>   
                     <img src="rolex.png" class="img-thumbnail">
@@ -97,7 +108,7 @@
                     <input type="number" class="form-control" id="qty1" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 col-md-4 d-flex">
+            <div class="col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product2">G-SHOCK</label>   
                     <img src="gshock.png" class="img-thumbnail">
@@ -105,7 +116,7 @@
                     <input type="number" class="form-control" id="qty2" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 col-md-4 d-flex">
+            <div class="col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product3">CASIO</label>   
                     <img src="casio.png" class="img-thumbnail">
@@ -113,7 +124,7 @@
                     <input type="number" class="form-control" id="qty3" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 col-md-4 d-flex">
+            <div class="col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product4">SEIKO 5</label>   
                     <img src="seiko.png" class="img-thumbnail">
@@ -121,7 +132,7 @@
                     <input type="number" class="form-control" id="qty4" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 col-md-4 d-flex">
+            <div class="col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product5">TIMEX</label>   
                     <img src="timex.png" class="img-thumbnail">
@@ -129,7 +140,7 @@
                     <input type="number" class="form-control" id="qty5" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 col-md-4 d-flex">
+            <div class="col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product6">GARMIN</label>   
                     <img src="garmin.png" class="img-thumbnail">
@@ -151,4 +162,5 @@
     <script src="app.js"></script>
 </body>
 </html>
+
 
