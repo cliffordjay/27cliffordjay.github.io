@@ -40,18 +40,17 @@
             background-color: #ffffff;
             border: 1px solid #bdbdbd;
             border-radius: 5px;
-            padding: 15px;
+            padding: 10px;
             margin-bottom: 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             flex: 1;
-            perspective: 1000px;
             transition: transform 0.6s;
         }
         .product:hover {
-            transform: rotateY(180deg);
+            transform: rotateY(360deg);
             background-color: #e0f2f1;
         }
         .product img {
@@ -61,23 +60,23 @@
         }
         .product label {
             font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 10px;
+            font-size: 1.1em;
+            margin-top: 5px;
         }
         .product input {
             width: 80%;
             margin: 0 auto;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         .orders {
             margin-top: 20px;
         }
         @media (max-width: 767px) {
             .product {
-                padding: 10px;
+                padding: 5px;
             }
             .product label {
-                font-size: 1em;
+                font-size: 0.9em;
             }
         }
         .col-custom {
@@ -100,7 +99,7 @@
             <hr class="hr">
         </div>
         <div class="row">
-            <div class="col-4 d-flex">
+            <div class="col-4 col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product1">ROLEX</label>   
                     <img src="rolex.png" class="img-thumbnail">
@@ -108,7 +107,7 @@
                     <input type="number" class="form-control" id="qty1" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 d-flex">
+            <div class="col-4 col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product2">G-SHOCK</label>   
                     <img src="gshock.png" class="img-thumbnail">
@@ -116,7 +115,7 @@
                     <input type="number" class="form-control" id="qty2" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 d-flex">
+            <div class="col-4 col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product3">CASIO</label>   
                     <img src="casio.png" class="img-thumbnail">
@@ -124,7 +123,7 @@
                     <input type="number" class="form-control" id="qty3" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 d-flex">
+            <div class="col-4 col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product4">SEIKO 5</label>   
                     <img src="seiko.png" class="img-thumbnail">
@@ -132,7 +131,7 @@
                     <input type="number" class="form-control" id="qty4" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 d-flex">
+            <div class="col-4 col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product5">TIMEX</label>   
                     <img src="timex.png" class="img-thumbnail">
@@ -140,7 +139,7 @@
                     <input type="number" class="form-control" id="qty5" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-4 d-flex">
+            <div class="col-4 col-custom d-flex">
                 <div class="product flex-fill">
                     <label id="product6">GARMIN</label>   
                     <img src="garmin.png" class="img-thumbnail">
