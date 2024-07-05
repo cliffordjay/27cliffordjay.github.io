@@ -15,7 +15,7 @@
         .header {
             text-align: center;
             background-color: #00796b;
-            color: black; /* Change text color to black */
+            color: white;
             padding: 20px 0;
             position: relative;
             overflow: hidden;
@@ -23,7 +23,7 @@
         .header h2 {
             margin: 0;
             font-size: 2.5em;
-            background-color: skyblue;
+            background-color: #ffeb3b;
             display: inline-block;
             padding: 0 20px;
             animation: fadeIn 5s infinite alternate;
@@ -41,7 +41,7 @@
             border: 1px solid #bdbdbd;
             border-radius: 5px;
             padding: 10px;
-            margin-bottom: 10px; /* Reduced margin-bottom to make products closer */
+            margin-bottom: 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -82,7 +82,6 @@
         .col-custom {
             flex: 0 0 30%;
             max-width: 30%;
-            padding: 5px;
         }
         @media (max-width: 767px) {
             .col-custom {
@@ -150,7 +149,7 @@
             </div>
         </div>
         <div class="row orders">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <label for="carts">Orders</label><br>
                 <textarea class="form-control" rows="15" id="carts" cols="200" readonly style="width:100%;font-size:12px;"></textarea>
                 <input type="text" class="form-control border-0" id="total" readonly placeholder="Total">
@@ -162,5 +161,6 @@
     <script src="app.js"></script>
 </body>
 </html>
+
 
 
