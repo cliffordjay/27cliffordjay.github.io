@@ -47,9 +47,10 @@
             flex-direction: column;
             justify-content: space-between;
             flex: 1;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
         }
         .product:hover {
-            transform: scale(1.05);
+            transform: rotateY(180deg);
             background-color: #e0f2f1;
         }
         .product img {
@@ -70,6 +71,14 @@
         .orders {
             margin-top: 20px;
         }
+        @media (max-width: 767px) {
+            .product {
+                padding: 10px;
+            }
+            .product label {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -80,7 +89,7 @@
             <hr class="hr">
         </div>
         <div class="row">
-            <div class="col-md-4 d-flex">
+            <div class="col-6 col-md-4 d-flex">
                 <div class="product flex-fill">
                     <label id="product1">ROLEX</label>   
                     <img src="rolex.png" class="img-thumbnail">
@@ -88,7 +97,7 @@
                     <input type="number" class="form-control" id="qty1" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-md-4 d-flex">
+            <div class="col-6 col-md-4 d-flex">
                 <div class="product flex-fill">
                     <label id="product2">G-SHOCK</label>   
                     <img src="gshock.png" class="img-thumbnail">
@@ -96,7 +105,7 @@
                     <input type="number" class="form-control" id="qty2" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-md-4 d-flex">
+            <div class="col-6 col-md-4 d-flex">
                 <div class="product flex-fill">
                     <label id="product3">CASIO</label>   
                     <img src="casio.png" class="img-thumbnail">
@@ -104,17 +113,15 @@
                     <input type="number" class="form-control" id="qty3" placeholder="Enter quantity">
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 d-flex">
+            <div class="col-6 col-md-4 d-flex">
                 <div class="product flex-fill">
-                    <label id="product4"SEIKO 5</label>   
+                    <label id="product4">SEIKO 5</label>   
                     <img src="seiko.png" class="img-thumbnail">
                     <label id="price4">7000.00</label>
                     <input type="number" class="form-control" id="qty4" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-md-4 d-flex">
+            <div class="col-6 col-md-4 d-flex">
                 <div class="product flex-fill">
                     <label id="product5">TIMEX</label>   
                     <img src="timex.png" class="img-thumbnail">
@@ -122,7 +129,7 @@
                     <input type="number" class="form-control" id="qty5" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="col-md-4 d-flex">
+            <div class="col-6 col-md-4 d-flex">
                 <div class="product flex-fill">
                     <label id="product6">GARMIN</label>   
                     <img src="garmin.png" class="img-thumbnail">
@@ -130,7 +137,8 @@
                     <input type="number" class="form-control" id="qty6" placeholder="Enter quantity">
                 </div>
             </div>
-            <div class="row orders">
+        </div>
+        <div class="row orders">
             <div class="col-md-12">
                 <label for="carts">Orders</label><br>
                 <textarea class="form-control" rows="10" id="carts" cols="200" readonly style="width:100%;font-size:12px;"></textarea>
