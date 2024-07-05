@@ -14,7 +14,7 @@
         }
         .header {
             text-align: center;
-            background-color: #87ceeb; /* Changed to sky blue */
+            background-color: #00796b;
             color: white;
             padding: 20px 0;
             position: relative;
@@ -23,7 +23,7 @@
         .header h2 {
             margin: 0;
             font-size: 2.5em;
-            background-color: #ffeb3b;
+            background-color: skyblue;
             display: inline-block;
             padding: 0 20px;
             animation: fadeIn 5s infinite alternate;
@@ -80,8 +80,9 @@
             }
         }
         .col-custom {
-            flex: 0 0 20%; /* Adjusted to make columns narrower */
-            max-width: 20%; /* Adjusted to make columns narrower */
+            flex: 0 0 30%;
+            max-width: 30%;
+            padding: 5px;
         }
         @media (max-width: 767px) {
             .col-custom {
@@ -149,7 +150,7 @@
             </div>
         </div>
         <div class="row orders">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <label for="carts">Orders</label><br>
                 <textarea class="form-control" rows="15" id="carts" cols="200" readonly style="width:100%;font-size:12px;"></textarea>
                 <input type="text" class="form-control border-0" id="total" readonly placeholder="Total">
