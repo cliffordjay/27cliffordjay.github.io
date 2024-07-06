@@ -1,27 +1,31 @@
-var product1 = document.getElementById("product1")
-var qty1 = document.getElementById("qty1")
-var price1 = document.getElementById("price1")
+var product1 = document.getElementById("product1");
+var qty1 = document.getElementById("qty1");
+var price1 = document.getElementById("price1");
 
-var product2 = document.getElementById("product2")
-var qty2 = document.getElementById("qty2")
-var price2 = document.getElementById("price2")
+var product2 = document.getElementById("product2");
+var qty2 = document.getElementById("qty2");
+var price2 = document.getElementById("price2");
 
-var product3 = document.getElementById("product3")
-var qty3 = document.getElementById("qty3")
-var price3 = document.getElementById("price3")
+var product3 = document.getElementById("product3");
+var qty3 = document.getElementById("qty3");
+var price3 = document.getElementById("price3");
 
-var product4 = document.getElementById("product4")
-var qty4 = document.getElementById("qty4")
-var price4 = document.getElementById("price4")
+var product4 = document.getElementById("product4");
+var qty4 = document.getElementById("qty4");
+var price4 = document.getElementById("price4");
 
-var product5 = document.getElementById("product5")
-var qty5 = document.getElementById("qty5")
-var price5 = document.getElementById("price5")
+var product5 = document.getElementById("product5");
+var qty5 = document.getElementById("qty5");
+var price5 = document.getElementById("price5");
 
-var product6 = document.getElementById("product6")
-var qty6 = document.getElementById("qty6")
-var price6 = document.getElementById("price6")
+var product6 = document.getElementById("product6");
+var qty6 = document.getElementById("qty6");
+var price6 = document.getElementById("price6");
 
+var carts = document.getElementById("carts");
+var total = document.getElementById("total");
+var cash = document.getElementById("cash");
+var change = document.getElementById("change");
 
 function addOrder() {
   carts.textContent = "";
@@ -61,23 +65,11 @@ function addOrder() {
   total.value = 'Php ' + totalCost.toFixed(2);
 }
 
-function checkOut(){
-    alert('Thank you for purchase \n\nCOME AGAIN!!');
-    
-    carts.textContent = "";
-    total.value = '₱ 0.00';
-    cash.value = '';
-    change.value = '';
-    
-    // Reset all product quantities
-    qty1.value = '';
-    qty2.value = '';
-    qty3.value = '';
-    qty4.value = '';
-    qty5.value = '';
-    qty6.value = '';
-
-
+function calculateChange() {
+  var totalCost = parseFloat(total.value.replace('Php ', ''));
+  var cashTendered = parseFloat(cash.value);
+  var changeAmount = cashTendered - totalCost;
+  change.value = 'Php ' + changeAmount.toFixed(2);
 }
 
 qty1.addEventListener("keyup", addOrder);
@@ -88,5 +80,3 @@ qty5.addEventListener("keyup", addOrder);
 qty6.addEventListener("keyup", addOrder);
 
 cash.addEventListener("keyup", calculateChange);
-
-document.getElementById('checkOut').addEventListener('click', checkOut);
