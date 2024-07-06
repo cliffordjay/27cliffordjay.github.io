@@ -66,6 +66,7 @@ function addOrder() {
     total.value = totalCost.toFixed(2);
     if (parseFloat(cash.value) > 0) {
         change.value = (parseFloat(cash.value) - totalCost).toFixed(2);
+    updateChange();
     }
 }
 
